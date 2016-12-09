@@ -1,0 +1,349 @@
+/*Declaring local Google font families*/
+@font-face {
+  font-family: Coiny;
+  src: url(fonts/coiny.ttf?#iefix);
+}
+@font-face {
+  font-family: Cookie;
+  src: url(fonts/cookie.ttf?#iefix);
+}
+@font-face {
+  font-family: Muli;
+  src: url(fonts/muli.ttf?#iefix);
+}
+@font-face {
+  font-family: Lato;
+  src: url(fonts/lato.ttf?#iefix);
+}
+html, body, .container {
+  /*Setting height and width of the parents of the sections to 100%, and padding/margin to 0, so that side blank space is eliminated*/
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.navbar {
+  /*The navigation bar has a dark blue background by default on mobile devices*/
+  background: #031e49!important;
+  border: none!important;
+  padding: .4em 0 .6em;
+  font-family: 'Coiny', serif;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  z-index: 1;
+}
+.navbar-brand {
+  padding: .4em 1em 1.2em;
+}
+.navbar-brand img {
+  /*Transition on navbar logo size*/
+  height: 1.8em;
+  width: 3em;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+.navbar-brand img:hover {
+  -ms-transform: scale(1.15, 1.15);
+  -webkit-transform: scale(1.15, 1.15);
+  transform: scale(1.15, 1.15);
+}
+.navbar-nav > li > a {
+  outline: none!important;
+  margin-right: 1em;
+  padding-bottom: .25em;
+  color: white!important;
+}
+.navbar-right {
+  background: #031e49!important;
+}
+.row {
+  /*Each row is set to 100% width and no margin/padding to eliminate side blank space*/
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.intro {
+  /*Putting linear gradient on top of background image to make text easier to read*/
+  background: linear-gradient(rgba(3, 30, 73, .7), rgba(3, 30, 73, .7)), url(http://www.walldevil.com/wallpapers/a92/laptop-headphone-table-lamp.jpg) no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  /*Position is relative to ease handling title and arrow icon positioning*/
+  position: relative;
+  color: white;
+  text-align: center;
+}
+.title {
+  /*Absolute position to position title vertically without affecting other elements*/
+  position: absolute;
+  height: 13em;
+  top: 50%;
+  margin-top: -8em;
+  font-family: 'Coiny', serif;
+}
+.title > h1 {
+  font-size: 3.4em;
+}
+.title > h3 {
+  font-family: 'Cookie', cursive;
+  font-size: 1.6em;
+}
+/*Repetitive animation for arrow icon*/
+@-webkit-keyframes arrowAnimation {
+  from {bottom: 1.8em;}
+  to {bottom: 1.1em;}
+}
+@keyframes arrowAnimation {
+  from {bottom: 1.8em;}
+  to {bottom: 1.1em;}
+}
+/*Arrow icon*/
+.intro a {
+  /*Absolute position to vertically/horizontally position arrow icon without affecting other elements*/
+  position: absolute;
+  bottom: 1.8em;
+  width: 10em;
+  left: 50%;
+  margin-left: -5em;
+  cursor: pointer;
+  color: white;
+  /*Implementation of arrow icon animation*/
+  -webkit-animation: arrowAnimation .5s infinite alternate;
+  animation: arrowAnimation .5s infinite alternate;
+}
+.services {
+  margin: 0 auto;
+  color: #000;
+  text-align: center;
+  padding: 2em 0;
+}
+.services h3 {
+  font-family: 'Coiny', serif;
+}
+.services p {
+  font-family: 'Muli', sans-serif;
+  font-size: 1.2em;
+}
+.services i {
+  font-size: 7em;
+  display: inline-block;
+  text-align: center;
+  margin-bottom: .4em;
+}
+/*Services inner div classes to enable opacity transition on scroll down handled with JavaScript*/
+.servicesInner {
+  opacity: 0;
+  -webkit-transition: all .7s ease-out;
+  transition: all .7s ease-out;
+}
+.servicesInnerVisible {
+  opacity: 1;
+}
+.work {
+  background: #a9bcb1;
+  padding: 2.5em 0 0;
+  text-align: center;
+  color: black;
+}
+/*Brightness transition for images in projects section*/
+.work > .row img {
+  cursor: pointer;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+.work > .row img:hover {
+  -webkit-filter: brightness(50%);
+  filter: brightness(50%);
+}
+.second-row img:nth-child(3) {
+  /*Enlargening image of Stopwatch app with scale transform*/
+  -ms-transform: scale(.8, .8);
+  -webkit-transform: scale(.8, .8);
+  transform: scale(.8, .8);
+  margin-top: -2em;
+}
+.modal-div {
+  /*Fixed modal centerd on page to appear on project thumbnail click, containing project description*/
+  position: fixed;
+  width: 20em;
+  height: 32em;
+  margin-top: -16em;
+  margin-left: -10em;
+  top: 50%;
+  left: 50%;
+  background: #d6eef9;
+  border-radius: 5%;
+  z-index: 3;
+  /*Smooth transition handled with JavaScript*/
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all .7s;
+  transition: all .7s;
+}
+.modal-visible {
+  visibility: visible;
+  opacity: 1;
+}
+.modal-div > div {
+  margin-top: 1em;
+}
+.modal-div h2 {
+  font-family: 'Coiny', serif;
+}
+.work p {
+  font-size: 1.3em;
+  font-family: 'Muli', sans-serif;
+}
+/*Code for project descriptions' used technologies headers*/
+.work h4 {
+  display: inline-block;
+  font-family: 'Coiny', serif;
+  border: solid;
+  padding: .2em;
+}
+.work h4:not(:last-child) {
+  margin-right: .6em;
+}
+/*Code for project descriptions' 'Go to page' buttons*/
+.work a {
+  margin-top: 1em;
+  font-family: 'Muli', sans-serif;
+  padding: .3em 0;
+  text-decoration: none;
+}
+.fa-times {
+  cursor: pointer;
+}
+.page-cover {
+  /*Fixed dark div to cover page content when modal is displayed*/
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  background: black;
+  z-index: 2;
+  /*Transition on work section image click, handled with JavaScript*/
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .7s;
+  transition: all .7s;
+}
+.page-cover-visible {
+  opacity: .8;
+  visibility: visible;
+}
+.contact {
+  text-align: center;
+  background: #010a18;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  padding: 2.5em 0;
+}
+.contact > div:nth-child(2) {
+  margin-top: 1em;
+}
+.btn-group {
+  margin-top: 1em;
+}
+/*Color transition (white to red) for contact section link buttons on hover*/
+.btn-group > a {
+  color: white!important;
+  -webkit-transition: color .5s;
+  transition: color .5s;
+}
+.btn-group > a:hover {
+  color: #ed1e30!important;
+}
+/*Larger-than-mobile-screen-devices specific code*/
+@media screen and (min-width: 768px) {
+  /*Navigation bar background is transitioned from none to dark blue on scroll down on larger devices (handled in portfolioCtrl controller)*/
+  .navbar {
+    background: none!important;
+    -webkit-transition: background .5s;
+    transition: background .5s;
+  }
+  .navbar-bg {
+    background: #031e49!important;
+  }
+  .navbar-right {
+    background: none!important;
+  }
+  /*Navigation bar links bottom border transition from transparent to red*/
+  .navbar-nav > li > a {
+    border-bottom: transparent solid 2px;
+    -webkit-transition: border-bottom .5s;
+    transition: border-bottom .5s;
+  }
+  .navbar-nav > li > a:hover {
+    border-bottom: #ed1e30 solid 2.5px;
+  }
+  .navbar-brand img {
+    height: 2.2em;
+    width: 3.7em;
+  }
+  .title > h1 {
+    font-size: 4.6em;
+  }
+  .title > h3 {
+    font-size: 2em;
+  }
+  .services {
+    padding: 4.5em 4.5em 5.3em;
+    width: 90%;
+    text-align: left;
+  }
+  .services i {
+    width: 80%;
+    margin-top: .15em;
+    margin-bottom: 0;
+  }
+  .smartphone {
+    width: 90%!important;
+  }
+  .fa-code, .smartphone {
+    margin-top: .42em !important;
+  }
+  /*Positioning projects (work) section images*/
+  .work img:nth-child(2) {
+    position: relative;
+    bottom: .4em;
+  }
+  .work img:nth-child(3) {
+    position: relative;
+    top: .45em;
+  }
+  .second-row img:nth-child(2) {
+    position: relative;
+    top: .2em;
+  }
+  .second-row img:nth-child(3) {
+    -ms-transform: scale(.7, .7);
+    -webkit-transform: scale(.7, .7);
+    transform: scale(.7, .7);
+    margin-top: -5.9em;
+  }
+  .modal-div {
+    width: 45em;
+    height: 20em;
+    margin-top: -10em;
+    margin-left: -22.5em;
+  }
+  .fa-times {
+    margin-left: 1em;
+  }
+  .contact {
+    padding: 2.2em 10em;
+  }
+}
+/*Code specific for mobile screen devices - adding margin to project descriptions displayed in modal*/
+@media screen and (max-width: 768px) {
+  .modal-div > div:first-child h2 {
+    margin-top: 1.8em;
+  }
+  .modal-div > div:nth-child(2) h2 {
+    margin-top: 1.5em;
+  }
+  .modal-div > div:nth-child(4) h2, .modal-div > div:nth-child(5) h2 {
+    margin-top: 1em;
+  }
+}
