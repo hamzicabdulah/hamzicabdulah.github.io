@@ -37,7 +37,7 @@ app.controller("portfolioCtrl", function ($scope) {
       document.querySelector('.servicesInner').className = 'servicesInner';
     }
     //Navigation bar dark blue background appears on scroll down for all but mobile view devices
-    if (window.pageYOffset > 570) {
+    if (window.pageYOffset > 300) {
       document.querySelector('.navbar-default').className += ' navbar-bg';
     } else {
       document.querySelector('.navbar-default').className = 'navbar navbar-default navbar-fixed-top';
