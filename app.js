@@ -32,9 +32,9 @@ app.controller("portfolioCtrl", function ($scope) {
   window.addEventListener('scroll', function (e) {
     //Services content appears transitionally on scroll down for all devices
     if (window.pageYOffset > 230) {
-      document.querySelector('.servicesInner').className += ' servicesInnerVisible';
+      document.querySelector('.services-inner').className += ' services-inner-visible';
     } else {
-      document.querySelector('.servicesInner').className = 'servicesInner';
+      document.querySelector('.services-inner').className = 'services-inner';
     }
     //Navigation bar dark blue background appears on scroll down for all but mobile view devices
     if (window.pageYOffset > 300) {
