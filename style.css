@@ -64,7 +64,7 @@ html, body, .container {
 }
 .intro {
   /*Putting linear gradient on top of background image to make text easier to read*/
-  background: linear-gradient(rgba(3, 30, 73, .7), rgba(3, 30, 73, .7)), url(http://www.walldevil.com/wallpapers/a92/laptop-headphone-table-lamp.jpg) no-repeat center center fixed;
+  background: linear-gradient(rgba(3, 30, 73, .7), rgba(3, 30, 73, .7)), url(http://www.walldevil.com/wallpapers/a92/laptop-headphone-table-lamp.jpg) no-repeat center;
   background-size: cover;
   height: 100%;
   /*Position is relative to ease handling title and arrow icon positioning*/
@@ -280,6 +280,9 @@ html, body, .container {
   .navbar-brand img {
     height: 2.2em;
     width: 3.7em;
+  }
+  .intro {
+    background-attachment: fixed;
   }
   .title > h1 {
     font-size: 4.6em;
