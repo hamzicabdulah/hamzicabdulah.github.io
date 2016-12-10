@@ -116,18 +116,19 @@ html, body, .container {
   text-align: center;
   padding: 2em 0;
 }
-.services h3 {
+.services h4 {
   font-family: 'Coiny', serif;
+  font-size: 1.23em;
 }
 .services p {
   font-family: 'Muli', sans-serif;
-  font-size: 1.2em;
+  font-size: 1.1em;
+  margin-bottom: 3em;
 }
 .services i {
   font-size: 7em;
   display: inline-block;
   text-align: center;
-  margin-bottom: .4em;
 }
 /*Services inner div classes to enable opacity transition on scroll down handled with JavaScript*/
 .servicesInner {
@@ -291,20 +292,23 @@ html, body, .container {
     font-size: 2em;
   }
   .services {
-    padding: 4.5em 4.5em 5.3em;
-    width: 90%;
+    padding: 5.1em 4.3em 2.5em;
     text-align: left;
   }
   .services i {
-    width: 80%;
-    margin-top: .15em;
-    margin-bottom: 0;
+    width: 90%;
+  }
+  .fa-code {
+    margin-bottom: 0.05em;
   }
   .smartphone {
     width: 90%!important;
   }
-  .fa-code, .smartphone {
-    margin-top: .42em !important;
+  .services h4 {
+    font-size: 1.5em;
+  }
+  .services p {
+    font-size: 1.2em;
   }
   /*Positioning projects (work) section images*/
   .work img:nth-child(2) {
