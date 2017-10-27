@@ -64,7 +64,7 @@ html, body, .container {
 }
 .intro {
   /*Putting linear gradient on top of background image to make text easier to read*/
-  background: linear-gradient(rgba(3, 30, 73, .7), rgba(3, 30, 73, .7)), url(images/mainBg.jpg) no-repeat center;
+  background: linear-gradient(rgba(3, 30, 73, .7), rgba(3, 30, 73, .7)), url(https://www.walldevil.com/wallpapers/a92/laptop-headphone-table-lamp.jpg), url(images/mainBg.jpg) no-repeat center;
   background-size: cover;
   height: 100%;
   /*Position is relative to ease handling title and arrow icon positioning*/
