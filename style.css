@@ -64,7 +64,7 @@ html, body, .container {
 }
 .intro {
   /*Putting linear gradient on top of background image to make text easier to read*/
-  background: linear-gradient(rgba(3, 30, 73, .7), rgba(3, 30, 73, .7)), url(http://www.walldevil.com/wallpapers/a92/laptop-headphone-table-lamp.jpg) no-repeat center;
+  background: linear-gradient(rgba(3, 30, 73, .7), rgba(3, 30, 73, .7)), url(images/mainBg.jpg) no-repeat center;
   background-size: cover;
   height: 100%;
   /*Position is relative to ease handling title and arrow icon positioning*/
@@ -141,7 +141,7 @@ html, body, .container {
 }
 .work {
   background: #a9bcb1;
-  padding: 2.5em 0 0;
+  padding: 2.5em 0 1em;
   text-align: center;
   color: black;
 }
@@ -155,12 +155,20 @@ html, body, .container {
   -webkit-filter: brightness(50%);
   filter: brightness(50%);
 }
-.second-row img:nth-child(3) {
-  /*Enlargening image of Stopwatch app with scale transform*/
-  -ms-transform: scale(.8, .8);
-  -webkit-transform: scale(.8, .8);
-  transform: scale(.8, .8);
-  margin-top: -2em;
+.pollo {
+  -ms-transform: scale(.95, .95);
+  -webkit-transform: scale(.95, .95);
+  transform: scale(.95, .95);
+}
+.recipes, .gameOfLife, .ticTacToe, .simon, .fccLead, .barChart {
+  -ms-transform: scale(.98, .98);
+  -webkit-transform: scale(.98, .98);
+  transform: scale(.98, .98);
+}
+.pomodoro, .calc {
+  -ms-transform: scale(.965, .965);
+  -webkit-transform: scale(.965, .965);
+  transform: scale(.965, .965);
 }
 .modal-div {
   /*Fixed modal centerd on page to appear on project thumbnail click, containing project description*/
@@ -301,9 +309,6 @@ html, body, .container {
   .fa-code {
     margin-bottom: 0.05em;
   }
-  .smartphone {
-    width: 90%!important;
-  }
   .services h4 {
     font-size: 1.5em;
   }
@@ -311,23 +316,27 @@ html, body, .container {
     font-size: 1.2em;
   }
   /*Positioning projects (work) section images*/
-  .work img:nth-child(2) {
-    position: relative;
-    bottom: .4em;
+  .pollo, .barChart {
+    margin-top: -.35em;
   }
-  .work img:nth-child(3) {
-    position: relative;
-    top: .45em;
+  .recipes {
+    margin-top: -.4em;
   }
-  .second-row img:nth-child(2) {
-    position: relative;
-    top: .2em;
+  .picThirst, .heatMap {
+    margin-top: .3em;
   }
-  .second-row img:nth-child(3) {
-    -ms-transform: scale(.7, .7);
-    -webkit-transform: scale(.7, .7);
-    transform: scale(.7, .7);
-    margin-top: -5.9em;
+  .picThirst {
+    -ms-transform: scale(1.014, 1.014);
+    -webkit-transform: scale(1.014, 1.014);
+    transform: scale(1.014, 1.014);
+  }
+  .heatMap {
+    -ms-transform: scale(1.035, 1.035);
+    -webkit-transform: scale(1.035, 1.035);
+    transform: scale(1.035, 1.035);
+  }
+  .ticTacToe {
+    margin-top: .2em;
   }
   .modal-div {
     width: 45em;

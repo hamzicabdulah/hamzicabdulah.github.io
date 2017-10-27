@@ -1,116 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Portfolio</title>
-    <meta name="description" content="Personal portfolio page as a web developer">
-    <meta name="author" content="Abdulah Hamzic">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--Loading Bootstrap 3-->
-    <link rel="stylesheet" href="bower_components/bootstrap.min.css"/>
-    <link href="style.css" rel="stylesheet"/>
-    <!--Loading icons-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-    <!--Loading AngularJS in the head, so that page doesn't load before all Angular components are-->
-    <script src="bower_components/angular.min.js"></script>
-  </head>
-  <body ng-app="portfolio" ng-controller="portfolioCtrl">
-    <!--Bootstrap navigation bar-->
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#intro" du-smooth-scroll duration="800"><img src="images/logo.png" alt="<A.H.>"/></a>
-          <!--Collapse button for mobile view, handled with Angular UI-Bootstrap-->
-          <button type="button" class="navbar-toggle" ng-click="navbarCollapsed = !navbarCollapsed">
+
+<head>
+  <title>Portfolio</title>
+  <meta name="description" content="Personal portfolio page as a web developer">
+  <meta name="author" content="Abdulah Hamzic">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--Loading Bootstrap 3-->
+  <link rel="stylesheet" href="bower_components/bootstrap.min.css" />
+  <link href="style.css" rel="stylesheet" />
+  <!--Loading icons-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  <!--Loading AngularJS in the head, so that page doesn't load before all Angular components are-->
+  <script src="bower_components/angular.min.js"></script>
+</head>
+
+<body ng-app="portfolio" ng-controller="portfolioCtrl">
+  <!--Bootstrap navigation bar-->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#intro" du-smooth-scroll duration="800"><img src="images/logo.png" alt="<A.H.>"/></a>
+        <!--Collapse button for mobile view, handled with Angular UI-Bootstrap-->
+        <button type="button" class="navbar-toggle" ng-click="navbarCollapsed = !navbarCollapsed">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
+      </div>
+      <div class="collapse navbar-collapse navbar-right" uib-collapse="navbarCollapsed">
+        <ul class="nav navbar-nav">
+          <!--Using Angular Scroll library to enable smooth scrollng with navigation bar buttons-->
+          <li><a href="#services" du-smooth-scroll offset="65" duration="800" ng-click="navbarCollapsed = !navbarCollapsed">Services</a></li>
+          <li><a href="#work" du-smooth-scroll offset="45" duration="800" ng-click="navbarCollapsed = !navbarCollapsed">Work</a></li>
+          <li><a href="#contact" du-smooth-scroll duration="800" ng-click="navbarCollapsed = !navbarCollapsed">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <!--Intro section-->
+    <section class="row intro" id="intro">
+      <div class="title col-xs-12">
+        <h1>Abdulah Hamzic</h1>
+        <h3>Web Developer</h3>
+      </div>
+      <a href="#services" du-smooth-scroll offset="65" duration="800"><i class="fa fa-chevron-down fa-2x"></i></a>
+    </section>
+    <!--Services section-->
+    <section class="row services" id="services">
+      <div class="services-inner">
+        <div class="col-xs-12 col-md-4">
+          <i class="material-icons design-icon">&#xE1B1;</i>
+          <h4>Front End Web Development</h4>
+          <p>I build responsive websites from scratch, using various front end web development
+            technologies, including HTML, CSS, JavaScript, React.js, jQuery, AngularJS, Sass, Bootstrap etc.</p>
         </div>
-        <div class="collapse navbar-collapse navbar-right" uib-collapse="navbarCollapsed">
-          <ul class="nav navbar-nav">
-            <!--Using Angular Scroll library to enable smooth scrollng with navigation bar buttons-->
-            <li><a href="#services" du-smooth-scroll offset="65" duration="800" ng-click="navbarCollapsed = !navbarCollapsed">Services</a></li>
-            <li><a href="#work" du-smooth-scroll offset="45" duration="800" ng-click="navbarCollapsed = !navbarCollapsed">Work</a></li>
-            <li><a href="#contact" du-smooth-scroll duration="800" ng-click="navbarCollapsed = !navbarCollapsed">Contact</a></li>
-          </ul>
+        <div class="col-xs-12 col-md-4">
+          <i class="fa fa-code fa-5x" aria-hidden="true"></i>
+          <h4>Back End Web Development</h4>
+          <p>I develop website back-ends, using Node.js and its powerful framework, Express.js. For databases, I use Mongo.DB
+            — more often than not, the Mongoose data-modelling format.</p>
+        </div>
+        <div class="col-xs-12 col-md-4">
+            <i class="fa fa-chrome fa fa-5x" aria-hidden="true"></i>
+          <h4>Web Scraping/Automation</h4>
+          <p>I enjoy building web scrapers/crawlers/bots and automating various Browser tasks. For this purpose, I make use
+            of Node.js, and some of its web scraping/automation packages, such as Nightmare.js and X-Ray.</p>
         </div>
       </div>
-    </nav>
-    <div class="container">
-      <!--Intro section-->
-      <section class="row intro" id="intro">
-        <div class="title col-xs-12">
-          <h1>Abdulah Hamzic</h1>
-          <h3>Front-End Developer</h3>
+    </section>
+    <!--Projects section-->
+    <section class="row work" id="work">
+      <div class="row">
+        <!--openModal function opens modal displaying the appropriate directive, passed as an argument to the function-->
+        <img class="col-xs-12 col-md-4 barsOnBars" src="images/bars-on-bars.png" alt="Bars On Bars" ng-click="openModal('barsOnBars')" />
+        <img class="col-xs-12 col-md-4 pollo" src="images/pollo.png" alt="Pollo" ng-click="openModal('pollo')" />
+        <img class="col-xs-12 col-md-4 recipes" src="images/recipe_box.png" alt="Recipe Box" ng-click="openModal('recipeBox')" />
+      </div>
+      <div class="row">
+        <img class="col-xs-12 col-md-4 gameOfLife" src="images/game-of-life.png" alt="Game of Life" ng-click="openModal('gameOfLife')" />
+        <img class="col-xs-12 col-md-4 picThirst" src="images/pic-thirst.png" alt="Pic Thirst" ng-click="openModal('picThirst')" />
+        <img class="col-xs-12 col-md-4 ticTacToe" src="images/ticTacToe.png" alt="Tic Tac Toe" ng-click="openModal('ticTacToe')" />
+      </div>
+      <div class="row">
+        <img class="col-xs-12 col-md-4 simon" src="images/simon.png" alt="Simon Says Game" ng-click="openModal('simon')" />
+        <img class="col-xs-12 col-md-4 heatMap" src="images/heat-map.png" alt="Heat Map" ng-click="openModal('heatMap')" />
+        <img class="col-xs-12 col-md-4 fccLead" src="images/fcc-leaderboard.png" alt="FCC Leaderboard" ng-click="openModal('fccLeaderboard')" />
+      </div>
+      <div class="row">
+        <img class="col-xs-12 col-md-4 scatter" src="images/scatterplot.png" alt="Scatterplot Graph" ng-click="openModal('scatterplot')" />
+        <img class="col-xs-12 col-md-4 pomodoro" src="images/pomodoro.png" alt="Pomodoro Timer" ng-click="openModal('pomodoro')" />
+        <img class="col-xs-12 col-md-4 md" src="images/md-previewer.png" alt="Markdown Previewer" ng-click="openModal('markdown')" />
+      </div>
+      <div class="row">
+        <img class="col-xs-12 col-md-4 calc" src="images/calculator.png" alt="Calculator" ng-click="openModal('calculator')" />
+        <img class="col-xs-12 col-md-4 barChart" src="images/bar-chart.png" alt="Bar Chart" ng-click="openModal('barChart')" />
+        <img class="col-xs-12 col-md-4 quotes" src="images/quotes.png" alt="Quote Machine" ng-click="openModal('quotes')" />
+      </div>
+      <div class="modal-div">
+        <!--Modal content directives for each project-->
+        <div bars-on-bars ng-show="modalsObject.barsOnBars"></div>
+        <div pollo ng-show="modalsObject.pollo"></div>
+        <div recipe-box ng-show="modalsObject.recipeBox"></div>
+        <div game-of-life ng-show="modalsObject.gameOfLife"></div>
+        <div pic-thirst ng-show="modalsObject.picThirst"></div>
+        <div tic-tac-toe ng-show="modalsObject.ticTacToe"></div>
+        <div simon ng-show="modalsObject.simon"></div>
+        <div heat-map ng-show="modalsObject.heatMap"></div>
+        <div fcc-leaderboard ng-show="modalsObject.fccLeaderboard"></div>
+        <div scatterplot ng-show="modalsObject.scatterplot"></div>
+        <div pomodoro ng-show="modalsObject.pomodoro"></div>
+        <div markdown ng-show="modalsObject.markdown"></div>
+        <div calculator ng-show="modalsObject.calculator"></div>
+        <div bar-chart ng-show="modalsObject.barChart"></div>
+        <div quotes ng-show="modalsObject.quotes"></div>
+      </div>
+      <!--Div to cover page when modal is displayed on page-->
+      <div class="page-cover" ng-click="closeModal()"></div>
+    </section>
+    <!--Contact section-->
+    <section class="row contact" id="contact">
+      <img class="col-xs-6 col-xs-push-3 col-md-2 col-md-push-1 img-circle" src="images/self.jpg" alt="Picture of myself" />
+      <div class="col-xs-12 col-md-9 col-md-push-1">
+        <h4>If you have a project in mind and want to work together, feel free to reach out.</h4>
+        <div class="btn-group">
+          <a class="btn" target="_blank" href="mailto:abdulahhamzic@gmail.com"><i class="fa fa-2x fa-envelope-o"></i></a>
+          <a class="btn" target="_blank" href="https://github.com/hamzicabdulah"><i class="fa fa-2x fa-github"></i></a>
+          <a class="btn" target="_blank" href="https://mk.linkedin.com/in/abdulah-hamzic-a0a495117"><i class="fa fa-2x fa-linkedin"></i></a>
+          <a class="btn" target="_blank" href="https://codepen.io/abdulahhamzic/"><i class="fa fa-2x fa-codepen"></i></a>
         </div>
-        <a href="#services" du-smooth-scroll offset="65" duration="800"><i class="fa fa-chevron-down fa-2x"></i></a>
-      </section>
-      <!--Services section-->
-      <section class="row services" id="services">
-        <div class="services-inner">
-          <div class="col-xs-12 col-md-4">
-            <i class="material-icons design-icon">&#xE1B1;</i>
-            <h4>Web Design</h4>
-            <p>I create responsive websites that can be accessed across all devices. Every one of my projects is built from scratch and my attention to detail is what allows me to produce user-friendly interfaces.</p>
-          </div>
-          <div class="col-xs-12 col-md-4">
-            <i class="fa fa-code fa-5x" aria-hidden="true"></i>
-            <h4>Web Development</h4>
-            <p>I develop websites using various front end web development technologies, including JavaScript frameworks/libraries, such as jQuery and AngularJS.</p>
-          </div>
-          <div class="col-xs-12 col-md-4">
-            <i class="material-icons smartphone">&#xE32C;</i>
-            <h4>Mobile App Development</h4>
-            <p>I use the Ionic framework to build hybrid mobile applications that run smoothly on Android devices and look and feel like native mobile applications.</p>
-          </div>
-        </div>
-      </section>
-      <!--Projects section-->
-      <section class="row work" id="work">
-        <div class="row">
-          <!--openModal function opens modal displaying the appropriate directive, passed as an argument to the function-->
-          <img class="col-xs-12 col-md-4" src="images/ticTacToe.png" alt="Tic Tac Toe" ng-click="openModal('ticTacToe')"/>
-          <img class="col-xs-12 col-md-4" src="images/simon.png" alt="Simon Says" ng-click="openModal('simon')"/>
-          <img class="col-xs-12 col-md-4" src="images/quotes.png" alt="Random Quote Generator" ng-click="openModal('quotes')"/>
-        </div>
-        <div class="row second-row">
-          <img class="col-xs-12 col-md-4" src="images/pomodoro.png" alt="Pomodoro Timer" ng-click="openModal('pomodoro')"/>
-          <img class="col-xs-12 col-md-4" src="images/calculator.png" alt="Calculator" ng-click="openModal('calculator')"/>
-          <img class="col-xs-10 col-xs-push-1 col-md-4 col-md-push-0" src="images/stopwatch.PNG" alt="Stopwatch" ng-click="openModal('stopwatch')"/>
-        </div>
-        <div class="modal-div">
-          <!--Modal content directives for each project-->
-          <div tic-tac-toe ng-show="modalsObject.ticTacToe"></div>
-          <div simon ng-show="modalsObject.simon"></div>
-          <div quotes ng-show="modalsObject.quotes"></div>
-          <div pomodoro ng-show="modalsObject.pomodoro"></div>
-          <div calculator ng-show="modalsObject.calculator"></div>
-          <div stopwatch ng-show="modalsObject.stopwatch"></div>
-        </div>
-        <!--Div to cover page when modal is displayed on page-->
-        <div class="page-cover"></div>
-      </section>
-      <!--Contact section-->
-      <section class="row contact" id="contact">
-        <img class="col-xs-6 col-xs-push-3 col-md-2 col-md-push-1 img-circle" src="images/self.jpg" alt="Picture of myself"/>
-        <div class="col-xs-12 col-md-9 col-md-push-1">
-          <h4>If you have a project in mind and want to work together, feel free to reach out.</h4>
-          <div class="btn-group">
-            <a class="btn" target="_blank" href="mailto:abdulahhamzic@gmail.com"><i class="fa fa-2x fa-envelope-o"></i></a>
-            <a class="btn" target="_blank" href="https://github.com/hamzicabdulah"><i class="fa fa-2x fa-github"></i></a>
-            <a class="btn" target="_blank" href="https://mk.linkedin.com/in/abdulah-hamzic-a0a495117"><i class="fa fa-2x fa-linkedin"></i></a>
-            <a class="btn" target="_blank" href="http://codepen.io/abdulahhamzic/"><i class="fa fa-2x fa-codepen"></i></a>
-          </div>
-        </div>
-      </section>
-    </div>
-    <!--Loading additional JavaScript dependencies-->
-    <script src="bower_components/angular-scroll.min.js"></script>
-    <script src="bower_components/bootstrap.min.js"></script>
-    <script src="bower_components/ui-bootstrap-tpls.min.js"></script>
-    <script src="app.js"></script>
-  </body>
+      </div>
+    </section>
+  </div>
+  <!--Loading additional JavaScript dependencies-->
+  <script src="bower_components/angular-scroll.min.js"></script>
+  <script src="bower_components/bootstrap.min.js"></script>
+  <script src="bower_components/ui-bootstrap-tpls.min.js"></script>
+  <script src="app.js"></script>
+</body>
+
 </html>
