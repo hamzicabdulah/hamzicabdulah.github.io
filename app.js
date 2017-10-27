@@ -90,7 +90,7 @@ quotesDesc = 'Random Quote Generator to keep yourself motivated throughout the d
 //Directives for the description of each of the projects, displayed in the modal appropriately
 app.directive('barsOnBars', getTemplate('Bars On Bars', barsOnBarsDesc, 'https://bars-on-bars.herokuapp.com', 'AngularJS', 'Node/Express/MongoDB'));
 app.directive('pollo', getTemplate('Pollo', polloDesc, 'https://pollo-voting-app.herokuapp.com', 'React', 'Node/Express/MongoDB'));
-app.directive('recipeBox', getTemplate('Recipe Box', recipeBoxDesc, 'https://hamzicabdulah.github.io/recipe_box', 'React', 'Sass'));
+app.directive('recipeBox', getTemplate('Recipe Box', recipeBoxDesc, 'https://hamzicabdulah.github.io/recipe-box', 'React', 'Sass'));
 app.directive('gameOfLife', getTemplate('Game Of Life', gameOfLifeDesc, 'https://hamzicabdulah.github.io/game-of-life', 'React'));
 app.directive('picThirst', getTemplate('Pic Thirst', picThirstDesc, 'https://pic-thirst.herokuapp.com', 'Node/Express/MongoDB'));
 app.directive('ticTacToe', getTemplate('Tic Tac Toe', ticTacToeDesc, 'https://hamzicabdulah.github.io/tic_tac_toe', 'AngularJS'));
